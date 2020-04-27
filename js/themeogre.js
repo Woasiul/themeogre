@@ -150,7 +150,7 @@
 						$modal.addClass('modal-active loading');
 						$product.html('');
 						
-						$product.load('ajax-single.html#product-' + product_id);
+						$product.load('ajax/product-' + product_id + '.html');
 					}
 				})
 				
