@@ -218,7 +218,7 @@
 		function setup_gumroad() {
 			$('a.quick-view').each(function () {
 				let $this = $(this),
-						gum_link = $this.attr('data-gumroad');
+						gum_link = $this.attr('data-road');
 				
 				$this.attr('href', 'https://gum.co/' + gum_link);
 			});
@@ -245,5 +245,3 @@
 		themeogre.init();
 	});
 })(jQuery);
-
-
