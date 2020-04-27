@@ -140,16 +140,18 @@
 	 */
 	themeogre.quick_view = function () {
 		this.body
-				.on('click', 'a.quick-view.open-paypal', function (e) {
-					let product_id = $this.data('product_id'),
-							$modal = $('#quickview-modal'),
-							$product = $modal.find('.product-container');
-					
-					themeogre.body.addClass('quickview-active freeze').trigger('disable_scroll');
-					$modal.addClass('modal-active loading');
-					$product.html('');
-					
-					$product.load('ajax-single.html#product-' + product_id);
+				.on('click', 'a.loop-product__link', function (e) {
+					if (themeogre.body.hasClass('gumroad-active')) {
+						let product_id = $(this).data('product_id'),
+								$modal = $('#quickview-modal'),
+								$product = $modal.find('.product-container');
+						
+						themeogre.body.addClass('quickview-active freeze').trigger('disable_scroll');
+						$modal.addClass('modal-active loading');
+						$product.html('');
+						
+						$product.load('ajax-single.html#product-' + product_id);
+					}
 				})
 				
 				.on('click', '#quickview-modal', function (e) {
@@ -198,41 +200,19 @@
 		themeogre.body
 				.on('keyup', function (e) {
 					if (81 === e.keyCode && e.ctrlKey) {
-						
-						if (themeogre.body.hasClass('gumroad-active')) {
-							themeogre.body.removeClass('gumroad-active').addClass('paypal-active');
-							setup_paypal();
-							
-						} else if (themeogre.body.hasClass('paypal-active')) {
-							themeogre.body.removeClass('paypal-active');
-							reset_ogre();
-							
-						} else {
+						if (!themeogre.body.hasClass('gumroad-active')) {
 							themeogre.body.addClass('gumroad-active');
 							setup_gumroad();
 						}
-						
 					}
 				});
 		
 		function setup_gumroad() {
 			$('a.quick-view').each(function () {
 				let $this = $(this),
-						gum_link = $this.attr('data-road');
+						gum_link = $this.attr('data-gumroad');
 				
 				$this.attr('href', 'https://gum.co/' + gum_link);
-			});
-		}
-		
-		function setup_paypal() {
-			$('a.quick-view').each(function () {
-				$(this).addClass('open-paypal').attr('href', 'javascript:void(0)');
-			});
-		}
-		
-		function reset_ogre() {
-			$('a.quick-view').each(function () {
-				$(this).removeClass('open-paypal');
 			});
 		}
 	};
@@ -245,3 +225,5 @@
 		themeogre.init();
 	});
 })(jQuery);
+
+
