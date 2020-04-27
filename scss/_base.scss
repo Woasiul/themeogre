@@ -1,0 +1,72 @@
+/* # Accessibility */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	
+	&:focus {
+		@include font-size(15px);
+		background-color: $white;
+		border-radius: 3px;
+		clip: auto;
+		color: #c9c9c9;
+		display: block;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 0.9375rem;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000;
+	}
+}
+
+
+/* # Visibility */
+.hidden {
+	display: none !important;
+}
+
+@include media-max ($break__md) {
+	.hidden-sm {
+		display: none !important;
+	}
+}
+
+@include media-min-max ($break__md, $break__lg) {
+	.hidden-md {
+		display: none !important;
+	}
+}
+
+@include media-min ($break__lg) {
+	.hidden-lg {
+		display: none !important;
+	}
+}
+
+.visible-sm, .visible-md, .visible-lg {
+	display: none !important;
+}
+
+@include media-max ($break__md) {
+	.visible-sm {
+		display: block !important;
+	}
+}
+
+@include media-min-max ($break__md, $break__lg) {
+	.visible-md {
+		display: block !important;
+	}
+}
+
+@include media-min ($break__lg) {
+	.visible-lg {
+		display: block !important;
+	}
+}

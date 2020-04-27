@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'themeogre-icon';
+	src: url('../font/icons/themeogre-icon.woff2') format('woff2'),
+	url('../font/icons/themeogre-icon.otf') format('opentype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-themeogre-"]::before,
+[class*=" icon-themeogre-"]::before {
+	font-family: 'themeogre-icon' !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.icon-themeogre-logo:before {
+	content: '\e800';
+}
+
+.icon-themeogre-search:before {
+	content: '\e801';
+}
+
+.icon-themeogre-cart:before {
+	content: '\e802';
+}
+
+.icon-themeogre-menu:before {
+	content: '\e803';
+}
+
+.icon-themeogre-facebook:before {
+	content: '\e804';
+}
+
+.icon-themeogre-twitter:before {
+	content: '\e805';
+}
+
+.icon-themeogre-instagram:before {
+	content: '\e806';
+}
+
+.icon-themeogre-pinterest:before {
+	content: '\e807';
+}
+
+.icon-themeogre-empty-star:before {
+	content: '\e808';
+}

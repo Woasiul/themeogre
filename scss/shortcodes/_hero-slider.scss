@@ -1,0 +1,147 @@
+.slick-dots {
+	position: absolute;
+	bottom: -25px;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	
+	li {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin: 0 5px;
+		padding: 0;
+		cursor: pointer;
+		
+		button {
+			display: block;
+			width: 20px;
+			height: 20px;
+			padding: 5px;
+			cursor: pointer;
+			color: transparent;
+			border: 0;
+			outline: none;
+			background: transparent;
+			
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 5px;
+				height: 5px;
+				content: '';
+				display: block;
+				background: white;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+
+/*------------- Slick Theme -------------*/
+#typewriter {
+	.Typewriter__cursor {
+		font-weight: 300;
+		margin: 0 -10px;
+	}
+}
+
+
+/*------------- Slick Theme -------------*/
+.hero-slider {
+	height: 100vh;
+	background: url("../img/home.png") no-repeat;
+	background-size: cover;
+	
+	.carousel {
+		height: 100%;
+		position: relative;
+		
+		&.slick-initialized {
+			display: block !important;
+		}
+		
+		.slide {
+			color: white;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		
+		.slide-one {
+			h4 {
+				color: white;
+				font-size: 42px;
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+			
+			p {
+				font-size: 22px;
+				font-weight: 300;
+				max-width: 1000px;
+				margin: 0 60px 40px;
+				line-height: 1.32;
+			}
+			
+			.button {
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.slick-list,
+.slick-track {
+	height: 100%;
+}
+
+.slick-dots {
+	width: auto;
+	bottom: 100px;
+	right: 50px;
+	
+	li {
+		display: block;
+		margin: 13px;
+		
+		&.slick-active {
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				height: 20px;
+				width: 20px;
+				background: transparent;
+				border: 1px solid white;
+				border-radius: 20px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			button::before {
+				color: white;
+				opacity: 1;
+			}
+		}
+		
+		button::before {
+			color: white;
+			opacity: 1;
+			font-size: 5px;
+		}
+	}
+}

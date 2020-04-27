@@ -1,0 +1,23 @@
+#modal-backdrop {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, .5);
+	cursor: pointer;
+	pointer-events: none;
+	z-index: 500;
+	
+	body.freeze & {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+	
+	body.quickview-active & {
+		z-index: 1030;
+	}
+}

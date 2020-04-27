@@ -1,0 +1,29 @@
+body.live-preview-page {
+	overflow-y: hidden;
+	
+	&.preview-header-closed {
+		.preview__header {
+			display: none;
+		}
+		
+		iframe.preview__frame {
+			height: 100vh;
+		}
+	}
+	
+	#content {
+		padding-left: 0;
+	}
+	
+	.preview__header {
+		height: 54px;
+		background: #000;
+	}
+	
+	iframe.preview__frame {
+		width: 100%;
+		background-color: white;
+		border: 0;
+		height: calc(100vh - 54px);
+	}
+}

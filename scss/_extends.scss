@@ -1,0 +1,21 @@
+%clear_before, .clear_before {
+	&::before {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_after, .clear_after {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%centralize {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

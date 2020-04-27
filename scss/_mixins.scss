@@ -1,0 +1,35 @@
+@mixin media-max ($screen-size) {
+  @media screen and (max-width: $screen-size) {
+    @content;
+  }
+}
+
+
+
+@mixin media-min ($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
+
+
+@mixin media-min-max ($screen-min-size, $screen-max-size) {
+  @media screen and (min-width: $screen-min-size) and (max-width: $screen-max-size) {
+    @content;
+  }
+}
+
+
+@mixin bg-img ($img-url) {
+  background: url($img-url) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculate-rem($size);
+}
+
+

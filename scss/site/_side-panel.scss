@@ -1,0 +1,64 @@
+#side-panel {
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 100%;
+	z-index: 1010;
+	
+	body.quickview-active & {
+		filter: blur(5px);
+	}
+	
+	a.logo {
+		background: $color_primary;
+		height: 90px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		span.icon {
+			color: white;
+			font-size: 52px;
+		}
+	}
+	
+	.site-info {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		span {
+			color: $text_muted;
+			text-transform: uppercase;
+			font-weight: 500;
+			display: block;
+			transform: rotate(-90deg);
+			white-space: nowrap;
+		}
+	}
+	
+	.menu-toggle {
+		position: relative;
+		height: 75px;
+		border-top: $border__inactive;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		
+		&:hover span.icon {
+			color: $color_primary;
+		}
+		
+		span.icon {
+			color: $text_primary;
+			font-size: 34px;
+			transition: all .2s;
+		}
+	}
+}

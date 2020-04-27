@@ -1,0 +1,389 @@
+.container-fluid, %container-fluid {
+	width: 100%;
+	padding-right: 20px !important;
+	padding-left: 20px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+	
+	@include media-min($break__md) {
+		padding-right: 35px !important;
+		padding-left: 35px !important;
+	}
+	
+	@include media-min($break__lg) {
+		padding-right: 60px !important;
+		padding-left: 60px !important;
+	}
+	
+	@include media-min($break__xl) {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+}
+
+.container-fluid, %container-fluid {
+	@include media-min($break__xl) {
+		width: 90%;
+	}
+}
+
+.row, %row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+@mixin getColumn( $col ) {
+	$width: (100%/12)*$col;
+	
+	position: relative;
+	width: 100%;
+	flex: 0 0 #{$width};
+	max-width: #{$width};
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+@mixin offset($margin) {
+	margin-left: (100%/12)*$margin;
+}
+
+
+%col {
+	position: relative;
+	width: 100%;
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+%col-auto {
+	position: relative;
+	width: auto;
+	flex: 0 0 auto;
+	max-width: 100%;
+}
+
+%col-1 {
+	@include getColumn(1);
+}
+
+%col-1-half {
+	@include getColumn(1.5);
+}
+
+%col-2 {
+	@include getColumn(2);
+}
+
+%col-2-half {
+	@include getColumn(2.5);
+}
+
+%col-3 {
+	@include getColumn(3);
+}
+
+%col-3-half {
+	@include getColumn(3.5);
+}
+
+%col-4 {
+	@include getColumn(4);
+}
+
+%col-4-half {
+	@include getColumn(4.5);
+}
+
+%col-5 {
+	@include getColumn(5);
+}
+
+%col-5-half {
+	@include getColumn(5.5);
+}
+
+%col-6 {
+	@include getColumn(6);
+}
+
+%col-6-half {
+	@include getColumn(6.5);
+}
+
+%col-7 {
+	@include getColumn(7);
+}
+
+%col-7-half {
+	@include getColumn(7.5);
+}
+
+%col-8 {
+	@include getColumn(8);
+}
+
+%col-8-half {
+	@include getColumn(8.5);
+}
+
+%col-9 {
+	@include getColumn(9);
+}
+
+%col-9-half {
+	@include getColumn(9.5);
+}
+
+%col-10 {
+	@include getColumn(10);
+}
+
+%col-10-half {
+	@include getColumn(10.5);
+}
+
+%col-11 {
+	@include getColumn(11);
+}
+
+%col-11-half {
+	@include getColumn(11.5);
+}
+
+%col-12 {
+	@include getColumn(12);
+}
+
+
+@include media-min($break__md) {
+	%col-md-1 {
+		@include getColumn(1);
+	}
+	
+	%col-md-1-half {
+		@include getColumn(1.5);
+	}
+	
+	%col-md-2 {
+		@include getColumn(2);
+	}
+	
+	%col-md-2-half {
+		@include getColumn(2.5);
+	}
+	
+	%col-md-3 {
+		@include getColumn(3);
+	}
+	
+	%col-md-3-half {
+		@include getColumn(3.5);
+	}
+	
+	%col-md-4 {
+		@include getColumn(4);
+	}
+	
+	%col-md-4-half {
+		@include getColumn(4.5);
+	}
+	
+	%col-md-5 {
+		@include getColumn(5);
+	}
+	
+	%col-md-5-half {
+		@include getColumn(5.5);
+	}
+	
+	%col-md-6 {
+		@include getColumn(6);
+	}
+	
+	%col-md-6-half {
+		@include getColumn(6.5);
+	}
+	
+	%col-md-7 {
+		@include getColumn(7);
+	}
+	
+	%col-md-7-half {
+		@include getColumn(7.5);
+	}
+	
+	%col-md-8 {
+		@include getColumn(8);
+	}
+	
+	%col-md-8-half {
+		@include getColumn(8.5);
+	}
+	
+	%col-md-9 {
+		@include getColumn(9);
+	}
+	
+	%col-md-9-half {
+		@include getColumn(9.5);
+	}
+	
+	%col-md-10 {
+		@include getColumn(10);
+	}
+	
+	%col-md-10-half {
+		@include getColumn(10.5);
+	}
+	
+	%col-md-11 {
+		@include getColumn(11);
+	}
+	
+	%col-md-11-half {
+		@include getColumn(11.5);
+	}
+	
+	%col-md-12 {
+		@include getColumn(12);
+	}
+}
+
+
+@include media-min($break__lg) {
+	%col-lg-1 {
+		@include getColumn(1);
+	}
+	
+	%col-lg-1-half {
+		@include getColumn(1.5);
+	}
+	
+	%col-lg-2 {
+		@include getColumn(2);
+	}
+	
+	%col-lg-2-half {
+		@include getColumn(2.5);
+	}
+	
+	%col-lg-3 {
+		@include getColumn(3);
+	}
+	
+	%col-lg-3-half {
+		@include getColumn(3.5);
+	}
+	
+	%col-lg-4 {
+		@include getColumn(4);
+	}
+	
+	%col-lg-4-half {
+		@include getColumn(4.5);
+	}
+	
+	%col-lg-5 {
+		@include getColumn(5);
+	}
+	
+	%col-lg-5-half {
+		@include getColumn(5.5);
+	}
+	
+	%col-lg-6 {
+		@include getColumn(6);
+	}
+	
+	%col-lg-6-half {
+		@include getColumn(6.5);
+	}
+	
+	%col-lg-7 {
+		@include getColumn(7);
+	}
+	
+	%col-lg-7-half {
+		@include getColumn(7.5);
+	}
+	
+	%col-lg-8 {
+		@include getColumn(8);
+	}
+	
+	%col-lg-8-half {
+		@include getColumn(8.5);
+	}
+	
+	%col-lg-9 {
+		@include getColumn(9);
+	}
+	
+	%col-lg-9-half {
+		@include getColumn(9.5);
+	}
+	
+	%col-lg-10 {
+		@include getColumn(10);
+	}
+	
+	%col-lg-10-half {
+		@include getColumn(10.5);
+	}
+	
+	%col-lg-11 {
+		@include getColumn(11);
+	}
+	
+	%col-lg-11-half {
+		@include getColumn(11.5);
+	}
+	
+	%col-lg-12 {
+		@include getColumn(12);
+	}
+}
+
+%row-no-gutter {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+%col-no-gutter {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+%row-gutter-sm {
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+%col-gutter-sm {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+%row-gutter-lg {
+	margin-right: -20px;
+	margin-left: -20px;
+}
+
+%col-gutter-lg {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+%row-gutter-xl {
+	margin-right: -30px;
+	margin-left: -30px;
+}
+
+%col-gutter-xl {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+

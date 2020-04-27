@@ -1,0 +1,52 @@
+/* # Media screen */
+$break__xl: 1440px;
+$break__lg: 1152px;
+$break__md: 768px;
+$break__sm: 576px;
+
+/* # Typography */
+$font-family: 'Function Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+
+$font-size: 14px;
+$font-size_h1: 36px;
+$font-size_h2: 28px;
+$font-size_h3: 24px;
+$font-size_h4: 20px;
+$font-size_h5: 18px;
+$font-size_h6: 16px;
+
+$font-weight: 400;
+$font-weight_bold: 600;
+
+$letter-spacing: 0.025em;
+
+$line-height_base: 1.4;
+$line-height_head: 1.2;
+
+
+/* # Colors */
+$white: #ffffff;
+$black: #000000;
+
+$text_primary: #222222;
+$text_secondary: #9D9D9D;
+$text_muted: #C2C2C2;
+$text_primary__dark: #212529;
+$text_secondary__dark: #212529;
+$text_muted__dark: #212529;
+
+$color_primary: #fe3366;
+$color_secondary: #774dc6;
+
+$color_link: $text_primary;
+$color_link__hover: $text_primary;
+$color_link__dark: $text_primary;
+
+$foreground: #5e646e;
+$background: #f8f9fc;
+
+/* # Border */
+$border-color__inactive: #dee3eb;
+$border-color__active: #dee3eb;
+$border__inactive: 1px solid $border-color__inactive;
+$border__active: 1px solid $border-color__active;
