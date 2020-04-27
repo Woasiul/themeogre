@@ -930,9 +930,6 @@ body.quickview-active #modal-backdrop {
   left: 0;
 }
 
-body.paypal-active img.paypal-switch {
-  display: block;
-}
 body.gumroad-active img.gumroad-switch {
   display: block;
 }
