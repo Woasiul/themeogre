@@ -157,7 +157,7 @@
 				.on('click', '#quickview-modal', function (e) {
 					let target = $(e.target);
 					
-					if (target.hasClass('quickview-modal')) {
+					if (target.is('#quickview-modal')) {
 						$('#quickview-modal').removeClass('modal-active');
 						themeogre.body.removeClass('quickview-active freeze').trigger('enable_scroll');
 					}
@@ -225,5 +225,3 @@
 		themeogre.init();
 	});
 })(jQuery);
-
-
